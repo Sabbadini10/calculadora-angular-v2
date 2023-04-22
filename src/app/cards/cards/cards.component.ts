@@ -26,7 +26,7 @@ export class CardsComponent {
   calcular() {
     // Verificar si el resultado actual es vacío
     if (this.resultado === '') {
-      this.resultado = 'Error: Ingrese una operación válida';
+      this.resultado = 'Error';
       return;
     }
 
@@ -37,7 +37,7 @@ export class CardsComponent {
     const currentOp = operadores[i];
     const nextOp = operadores[i + 1];
     if (this.resultado.includes(nextOp) && this.resultado.endsWith(currentOp)) {
-      this.resultado = 'Error: No se pueden ingresar dos operadores consecutivos';
+      this.resultado = 'Error';
       return;
     }
   }

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+:root{
+  --tipografiaNumero: 'Bruno Ace SC', cursive;
+  --tipografiaLetra: 'Titan One', cursive;
+}
+
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
