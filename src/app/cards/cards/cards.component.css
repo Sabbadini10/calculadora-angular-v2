@@ -1,69 +1,70 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.75rem;
-  background-color: white;
-  width: 300px;
-  height: 370px;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
-  0 2px 4px -2px rgba(0,0,0,.1);
+  background-color: rgb(66, 66, 66);
+  width: 250px;
+  height: auto;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
 }
 
 .header {
-  position: relative;
-  background-clip: border-box;
   margin-top: 1.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  border-radius: 0.75rem;
-  background-color: rgb(33 150 243);
-  box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4);
-  height: 14rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .info {
+  margin-top: 1em;
   border: none;
   padding: 1.5rem;
-  text-align: center;
+ width: 100%;
+ justify-content: center;
+ align-items: center;
+ row-gap: 1em;
+ column-gap: 1em;
 }
 
-.title {
-  color: rgb(38 50 56);
-  letter-spacing: 0;
-  line-height: 1.375;
-  font-weight: 600;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+
+button {
+  width: 45px;
+  height: 45px;
+  transform: scale(1);
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgb(228, 232, 236);
+  background: linear-gradient(45deg, rgb(228, 232, 236) 0%, rgb(234 234 234) 100%);
+  transition: all .3s;
 }
 
-.footer {
-  padding: 0.75rem;
-  border: 1px solid rgb(236 239 241);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgba(0, 140, 255, 0.082);
+button:active {
+  background: rgb(218, 221, 224);
+  background: linear-gradient(45deg, rgb(218, 221, 224) 0%, rgb(241, 241, 241) 100%);
+  transition: all .3s;
+  transform: scale(.95);
 }
 
-.tag {
-  font-weight: 300;
-  font-size: .75rem;
-  display: block;
-}
 
-.action {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+
+
+.input {
   border: none;
   outline: none;
-  box-shadow: 0 4px 6px -1px rgba(33,150,243,.4),0 2px 4px -2px rgba(33,150,243,.4);
-  color: rgb(255 255 255);
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: .75rem;
-  padding: 0.75rem 1.5rem;
-  background-color: rgb(33 150 243);
-  border-radius: 0.5rem;
+  border-radius: 15px;
+  padding: 1em;
+  background: rgb(228, 232, 236);
+  transition: 300ms ease-in-out;
+  width: 100%;
+  height: 35px;
+}
+
+.input::placeholder {
+  color: black;
 }

@@ -1,12 +1,41 @@
 <div class="card">
-  <div class="header"></div>
-  <div class="info">
-    <p class="title">How to make this material card ?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-  molestiae quas vel sint commodi. </p>
+  <div class="header">
+    <input type="text" autocomplete="off" name="text" class="input" placeholder="{{resultado}}" disabled>
   </div>
-  <div class="footer">
-    <p class="tag">#HTML #CSS </p>
-    <button type="button" class="action">Get started </button>
+  <div class="info flex flex-col gap-1">
+    <div class="flex flex-row gap-3">
+      <button type="button" class="action"(click)="borrar()">C</button>
+    <button type="button" class="action" (click)="agregarOperador('(' || ')')">()</button>
+    <button type="button" class="action" (click)="agregarOperador('%')">%</button>
+    <button type="button" class="action" (click)="agregarOperador('/')">/</button>
+    </div>
+    <div class="flex flex-row gap-3">
+      <button type="button" class="action" (click)="agregarNumero(7)">7</button>
+    <button type="button" class="action" (click)="agregarNumero(8)">8</button>
+    <button type="button" class="action" (click)="agregarNumero(9)">9</button>
+    <button type="button" class="action" (click)="agregarOperador('*')">*</button>
+    </div>
+
+    <div class="flex flex-row gap-3">
+      <button type="button" class="action" (click)="agregarNumero(4)">4</button>
+      <button type="button" class="action" (click)="agregarNumero(5)">5</button>
+      <button type="button" class="action" (click)="agregarNumero(6)">6</button>
+      <button type="button" class="action" (click)="agregarOperador('-')">-</button>
+    </div>
+    <div class="flex flex-row gap-3">
+      <button type="button" class="action" (click)="agregarNumero(1)">1</button>
+      <button type="button" class="action" (click)="agregarNumero(2)">2</button>
+      <button type="button" class="action" (click)="agregarNumero(3)">3</button>
+      <button type="button" class="action" (click)="agregarOperador('+')">+</button>
+    </div>
+    <div class="flex flex-row gap-3">
+      <button type="button" class="action" (click)="agregarOperador('+' || '-')">+/-</button>
+      <button type="button" class="action" (click)="agregarNumero(0)">0</button>
+      <button type="button" class="action" (click)="agregarOperador('.')">.</button>
+      <button type="button" class="action" (click)="calcular()">=</button>
+    </div>
   </div>
   </div>
+
+  <p>Tu resultado es: {{datoFinal}}</p>
+  <pre>Tu resultado es: {{datoFinal}}</pre>
